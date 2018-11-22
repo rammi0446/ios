@@ -30,6 +30,7 @@ class SeeReservationsViewController: UIViewController {
         settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
         var username = UserDefaults.standard.string(forKey: "key")!
+    
         let resRef = db.collection("res").whereField("username", isEqualTo: username)
         
         print("Querying database")
@@ -43,15 +44,17 @@ class SeeReservationsViewController: UIViewController {
             else {
                 print("Got something!")
                 print("Num items in database matching query: \(snapshot!.count)")
-                
+                var i = 0
+                repeat{
                 // 1. Get one result from database
                 let results = snapshot!.documents
-                let data = results[0].data()
+                let data = results[i].data()
                 print(data["day"]!)
                 print(data["restaurant"]!)
-                self.textField.text = data["day"] as! String
-                self.textField.text = data["restaurant"] as! String
-                
+                self.textField.text = "\(data["day"]!): " + " \(data["restaurant"]!)" + " \(data["numSeats"])" as! String
+               
+                    i = i+1
+                }while(i < snapshot!.count)
                 
             }
         }
