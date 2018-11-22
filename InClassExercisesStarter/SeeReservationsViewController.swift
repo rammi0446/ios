@@ -51,7 +51,7 @@ class SeeReservationsViewController: UIViewController {
                 let data = results[i].data()
                 print(data["day"]!)
                 print(data["restaurant"]!)
-               var nextvalue = "\(data["day"]!): " + " \(data["restaurant"]!)" + " \(data["numSeats"])" as! String
+               var nextvalue = "\n" + "\((data["day"])!): " + " \((data["restaurant"])!)" + " \((data["numSeats"])!)" + "\n" as! String
                     self.textField.text.append(nextvalue)
                     i = i+1
                 }while(i < snapshot!.count)
