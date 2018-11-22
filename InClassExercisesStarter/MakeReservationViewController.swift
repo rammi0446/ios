@@ -26,6 +26,7 @@ class MakeReservationViewController: UIViewController {
         super.viewDidLoad()
 
         db = Firestore.firestore()
+        username = UserDefaults.standard.string(forKey: "key")!
         
         let settings = db.settings
         settings.areTimestampsInSnapshotsEnabled = true
@@ -40,7 +41,14 @@ class MakeReservationViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func buttonPressed(_ sender: Any) {
+        
         print("pressed the button")
+        let resRef = db.collection("res").document().setData([
+            "username" : self.username,
+            "restaurant" : nameTextField.text!,
+            "day" : dayTextField.text!,
+            "numSeats" : seatsTextField.text!
+            ])
     }
     
     

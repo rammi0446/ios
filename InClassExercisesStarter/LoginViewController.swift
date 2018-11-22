@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 
 class LoginViewController: UIViewController {
-    var data = ""
+    //var data = ""
     @IBOutlet weak var txtMsg: UILabel!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
@@ -42,13 +42,15 @@ class LoginViewController: UIViewController {
             (user, error) in
             
             if (user != nil) {
+             
                 // 1. Found a user!
                 print("User signed in! ")
                 print("User id: \(user?.user.uid)")
                 print("Email: \(user?.user.email)")
                 //set value of  email for next screen
-                self.data = (user?.user.email)!
+               //self.data = (user?.user.email)!
                 // 2. So send them to screen 2!
+                UserDefaults.standard.set(user?.user.email, forKey: "key")
                 self.performSegue(withIdentifier: "segueLoginSignup", sender: nil)
             }
             else {
@@ -79,6 +81,7 @@ class LoginViewController: UIViewController {
             (user, error) in
             
             if (user != nil) {
+                
                 // 1. New user created!
                 print("Created user: ")
                 print("User id: \(user?.user.uid)")
@@ -110,9 +113,9 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        print("going to next page")
-        let chatPage = segue.destination as! MenuTableViewController
-        chatPage.username = data
+        print("going to next page table")
+//        let chatPage = segue.destination as! MenuTableViewController
+//        chatPage.username = data
     }
    
 

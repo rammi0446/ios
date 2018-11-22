@@ -9,7 +9,7 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
-    var username = ""
+    //var username = ""
     var items = ["Restaurant Map", "Make a Reservation","Show Reservation"]
     
     
@@ -69,6 +69,10 @@ class MenuTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        print("going to next page reservation")
+//        let chatPage = segue.destination as! MakeReservationViewController
+//        chatPage.username = self.username
     }
     
 
