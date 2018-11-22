@@ -9,8 +9,8 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
-
-    var items = ["Apple", "banana"]
+    var username = ""
+    var items = ["Restaurant Map", "Make a Reservation","Show Reservation"]
     
     
     override func viewDidLoad() {
@@ -35,7 +35,7 @@ class MenuTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = "Put restaurant name here"
+        cell.textLabel?.text = items[indexPath.row]
         return cell
     }
     
@@ -45,13 +45,24 @@ class MenuTableViewController: UITableViewController {
         
         print("Person clicked in row number: \(i)")
         
-        if (i == 1) {
-            performSegue(withIdentifier: "segueMakeReservation", sender: nil)
+        if (i == 0) {
+            let vc1 = self.storyboard?.instantiateViewController(withIdentifier: "map")
+            self.navigationController?.pushViewController(vc1!, animated: true)
+        }
+        if(i == 1)
+        {
+            let vc1 = self.storyboard?.instantiateViewController(withIdentifier: "res")
+            self.navigationController?.pushViewController(vc1!, animated: true)
+        }
+        if(i == 2)
+        {
+            let vc1 = self.storyboard?.instantiateViewController(withIdentifier: "show")
+            self.navigationController?.pushViewController(vc1!, animated: true)
         }
         
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -59,6 +70,6 @@ class MenuTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

@@ -11,7 +11,7 @@ import FirebaseFirestore
 
 
 class MakeReservationViewController: UIViewController {
-
+    var username = ""
     // MARK: Outlets
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var dayTextField: UITextField!

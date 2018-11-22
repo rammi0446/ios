@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q5P-2D-QqU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4iy-S6-tvY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -199,6 +199,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="c4E-81-OKl"/>
                     <connections>
+                        <outlet property="txtEmail" destination="JYu-QG-jE5" id="k6f-T0-iIS"/>
+                        <outlet property="txtMsg" destination="ufh-rV-Yoh" id="4Es-RI-5T3"/>
+                        <outlet property="txtPassword" destination="XWN-mG-Ba1" id="Y3a-Mp-FaP"/>
                         <segue destination="irl-Fk-UKc" kind="show" identifier="segueLoginSignup" id="D1g-58-9Kn"/>
                     </connections>
                 </viewController>
@@ -229,9 +232,6 @@
                             <outlet property="delegate" destination="irl-Fk-UKc" id="Fkl-TK-j2O"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="YJd-aH-F1Y" kind="show" identifier="segueMakeReservation" id="ar9-uN-koG"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSU-kd-OpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -240,7 +240,7 @@
         <!--See Reservations View Controller-->
         <scene sceneID="7lv-L6-3Lb">
             <objects>
-                <viewController id="CfV-n3-lH4" customClass="SeeReservationsViewController" customModule="InClassExercisesStarter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="show" id="CfV-n3-lH4" customClass="SeeReservationsViewController" customModule="InClassExercisesStarter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bGh-iP-Y2k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -274,7 +274,7 @@
         <!--Make A Reservation-->
         <scene sceneID="z5Z-JE-WjR">
             <objects>
-                <viewController title="Make A Reservation" id="YJd-aH-F1Y" customClass="MakeReservationViewController" customModule="InClassExercisesStarter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="res" title="Make A Reservation" id="YJd-aH-F1Y" customClass="MakeReservationViewController" customModule="InClassExercisesStarter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v47-2r-I6R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -361,7 +361,7 @@
         <!--Resataurant Map-->
         <scene sceneID="hHs-nK-UoF">
             <objects>
-                <viewController title="Resataurant Map" id="q5P-2D-QqU" customClass="RestaurantMapViewController" customModule="InClassExercisesStarter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="map" title="Resataurant Map" id="q5P-2D-QqU" customClass="RestaurantMapViewController" customModule="InClassExercisesStarter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BQc-b5-5JC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
