@@ -10,7 +10,14 @@ import UIKit
 import FirebaseFirestore
 
 class SeeReservationsViewController: UIViewController {
-
+    var mapPokiName = ""
+    var mapPokiHP = 0
+    var mapPokiDefense = 0
+    var mapPokiMoney = 0
+    var mapPokiAttack = 0
+    
+    
+    
     
     //MARK: Outlets
     @IBOutlet weak var textField: UITextView!
@@ -24,22 +31,22 @@ class SeeReservationsViewController: UIViewController {
 
         print("You are on the see reservations screen")
         
+       let name = UserDefaults.standard.string(forKey: "pokName")
+//        textField.text = name
+        
         db = Firestore.firestore()
         
-        let settings = db.settings
-        settings.areTimestampsInSnapshotsEnabled = true
-        db.settings = settings
-        var username = UserDefaults.standard.string(forKey: "key")!
-    
-        let resRef = db.collection("res").whereField("username", isEqualTo: username)
-        
+//        let settings = db.settings
+//        settings.areTimestampsInSnapshotsEnabled = true
+//        db.settings = settings
+
+        let resRef = db.collection("mapPoki").whereField("name", isEqualTo: name)
         print("Querying database")
-        
         resRef.getDocuments() {
-            (snapshot, error) in
-            
+           (snapshot, error) in
+
             if (error != nil) {
-                print("Error getting results from query")
+               print("Error getting results from query")
             }
             else {
                 print("Got something!")
@@ -49,13 +56,18 @@ class SeeReservationsViewController: UIViewController {
                 // 1. Get one result from database
                 let results = snapshot!.documents
                 let data = results[i].data()
-                print(data["day"]!)
-                print(data["restaurant"]!)
-               var nextvalue = "\n" + "\((data["day"])!): " + " \((data["restaurant"])!)" + " \((data["numSeats"])!)" + "\n" as! String
-                    self.textField.text.append(nextvalue)
+                print(data["HP"]!)
+                print(data["Attack"]!)
+                print(data["Defense"]!)
+                print(data["Money"]!)
+                    self.mapPokiHP = data["HP"]! as! Int
+                    self.mapPokiName = data["name"]! as! String
+                    self.mapPokiAttack = data["Attack"]! as! Int
+                    self.mapPokiDefense = data["Defense"]! as! Int
+                    self.mapPokiMoney = data["Money"]! as! Int
                     i = i+1
                 }while(i < snapshot!.count)
-                
+
             }
         }
     }

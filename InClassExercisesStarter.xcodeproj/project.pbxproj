@@ -20,8 +20,9 @@
 		05EB5DF821A5E32800D9CE24 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB5DF721A5E32800D9CE24 /* MapViewController.swift */; };
 		05EB5DFA21A5E3A500D9CE24 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB5DF921A5E3A500D9CE24 /* TableViewController.swift */; };
 		05FBB3BA21A62876005CACC3 /* JSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FBB3B921A62876005CACC3 /* JSONViewController.swift */; };
-		9B020FFB21A6EF1100DB3212 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B020FFA21A6EF1100DB3212 /* GoogleService-Info.plist */; };
 		A69A599BE3BB28B1BC051681 /* Pods_InClassExercisesStarter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6F1AC2E4150BE1AF3406D7 /* Pods_InClassExercisesStarter.framework */; };
+		EC450F7921AED526001AB037 /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC450F7821AED526001AB037 /* CustomPointAnnotation.swift */; };
+		EC9C77F721B076EC00FE5AB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC9C77F621B076EC00FE5AB0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +44,8 @@
 		1D6F1AC2E4150BE1AF3406D7 /* Pods_InClassExercisesStarter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InClassExercisesStarter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B40CA9A68529FC1AE00F898 /* Pods-InClassExercisesStarter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InClassExercisesStarter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InClassExercisesStarter/Pods-InClassExercisesStarter.debug.xcconfig"; sourceTree = "<group>"; };
 		922D9DFDF5A7E8609903DE7F /* Pods-InClassExercisesStarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InClassExercisesStarter.release.xcconfig"; path = "Pods/Target Support Files/Pods-InClassExercisesStarter/Pods-InClassExercisesStarter.release.xcconfig"; sourceTree = "<group>"; };
-		9B020FFA21A6EF1100DB3212 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC450F7821AED526001AB037 /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPointAnnotation.swift; sourceTree = "<group>"; };
+		EC9C77F621B076EC00FE5AB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				0587C33321A6DC2B009A18E4 /* MenuTableViewController.swift */,
-				9B020FFA21A6EF1100DB3212 /* GoogleService-Info.plist */,
+				EC9C77F621B076EC00FE5AB0 /* GoogleService-Info.plist */,
 				0587C33521A6DD57009A18E4 /* LoginViewController.swift */,
 				0587C33921A6DF75009A18E4 /* MakeReservationViewController.swift */,
 				054C0C2E21A6E287005E8DE5 /* RestaurantMapViewController.swift */,
@@ -102,6 +104,7 @@
 				057C2C3621A5D26E00221B22 /* Assets.xcassets */,
 				057C2C3821A5D26E00221B22 /* LaunchScreen.storyboard */,
 				057C2C3B21A5D26E00221B22 /* Info.plist */,
+				EC450F7821AED526001AB037 /* CustomPointAnnotation.swift */,
 			);
 			path = InClassExercisesStarter;
 			sourceTree = "<group>";
@@ -185,7 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				057C2C3A21A5D26E00221B22 /* LaunchScreen.storyboard in Resources */,
-				9B020FFB21A6EF1100DB3212 /* GoogleService-Info.plist in Resources */,
+				EC9C77F721B076EC00FE5AB0 /* GoogleService-Info.plist in Resources */,
 				057C2C3721A5D26E00221B22 /* Assets.xcassets in Resources */,
 				057C2C3521A5D26E00221B22 /* Main.storyboard in Resources */,
 			);
@@ -265,6 +268,7 @@
 				057C2C3221A5D26E00221B22 /* FirebaseViewController.swift in Sources */,
 				05EB5DF821A5E32800D9CE24 /* MapViewController.swift in Sources */,
 				0587C33421A6DC2B009A18E4 /* MenuTableViewController.swift in Sources */,
+				EC450F7921AED526001AB037 /* CustomPointAnnotation.swift in Sources */,
 				054C0C2F21A6E287005E8DE5 /* RestaurantMapViewController.swift in Sources */,
 				057C2C3021A5D26E00221B22 /* AppDelegate.swift in Sources */,
 				054C0C2D21A6E1DD005E8DE5 /* SeeReservationsViewController.swift in Sources */,
