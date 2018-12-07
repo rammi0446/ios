@@ -11,7 +11,6 @@
 		054C0C2F21A6E287005E8DE5 /* RestaurantMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054C0C2E21A6E287005E8DE5 /* RestaurantMapViewController.swift */; };
 		057C2C3021A5D26E00221B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C2C2F21A5D26E00221B22 /* AppDelegate.swift */; };
 		057C2C3221A5D26E00221B22 /* FirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C2C3121A5D26E00221B22 /* FirebaseViewController.swift */; };
-		057C2C3521A5D26E00221B22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057C2C3321A5D26E00221B22 /* Main.storyboard */; };
 		057C2C3721A5D26E00221B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057C2C3621A5D26E00221B22 /* Assets.xcassets */; };
 		057C2C3A21A5D26E00221B22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057C2C3821A5D26E00221B22 /* LaunchScreen.storyboard */; };
 		0587C33421A6DC2B009A18E4 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0587C33321A6DC2B009A18E4 /* MenuTableViewController.swift */; };
@@ -22,6 +21,7 @@
 		05FBB3BA21A62876005CACC3 /* JSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FBB3B921A62876005CACC3 /* JSONViewController.swift */; };
 		A69A599BE3BB28B1BC051681 /* Pods_InClassExercisesStarter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6F1AC2E4150BE1AF3406D7 /* Pods_InClassExercisesStarter.framework */; };
 		EC450F7921AED526001AB037 /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC450F7821AED526001AB037 /* CustomPointAnnotation.swift */; };
+		EC45367121BA9E4700F7C6DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC45367021BA9E4700F7C6DA /* Main.storyboard */; };
 		EC9C77F721B076EC00FE5AB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC9C77F621B076EC00FE5AB0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,6 @@
 		057C2C2C21A5D26E00221B22 /* InClassExercisesStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InClassExercisesStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		057C2C2F21A5D26E00221B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		057C2C3121A5D26E00221B22 /* FirebaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewController.swift; sourceTree = "<group>"; };
-		057C2C3421A5D26E00221B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		057C2C3621A5D26E00221B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		057C2C3921A5D26E00221B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		057C2C3B21A5D26E00221B22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		4B40CA9A68529FC1AE00F898 /* Pods-InClassExercisesStarter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InClassExercisesStarter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InClassExercisesStarter/Pods-InClassExercisesStarter.debug.xcconfig"; sourceTree = "<group>"; };
 		922D9DFDF5A7E8609903DE7F /* Pods-InClassExercisesStarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InClassExercisesStarter.release.xcconfig"; path = "Pods/Target Support Files/Pods-InClassExercisesStarter/Pods-InClassExercisesStarter.release.xcconfig"; sourceTree = "<group>"; };
 		EC450F7821AED526001AB037 /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPointAnnotation.swift; sourceTree = "<group>"; };
+		EC45367021BA9E4700F7C6DA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EC9C77F621B076EC00FE5AB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,9 +100,9 @@
 				054C0C2C21A6E1DD005E8DE5 /* SeeReservationsViewController.swift */,
 				053F392B21A6CEB6001EA763 /* Example Viiew Controllers */,
 				057C2C2F21A5D26E00221B22 /* AppDelegate.swift */,
-				057C2C3321A5D26E00221B22 /* Main.storyboard */,
 				057C2C3621A5D26E00221B22 /* Assets.xcassets */,
 				057C2C3821A5D26E00221B22 /* LaunchScreen.storyboard */,
+				EC45367021BA9E4700F7C6DA /* Main.storyboard */,
 				057C2C3B21A5D26E00221B22 /* Info.plist */,
 				EC450F7821AED526001AB037 /* CustomPointAnnotation.swift */,
 			);
@@ -190,7 +190,7 @@
 				057C2C3A21A5D26E00221B22 /* LaunchScreen.storyboard in Resources */,
 				EC9C77F721B076EC00FE5AB0 /* GoogleService-Info.plist in Resources */,
 				057C2C3721A5D26E00221B22 /* Assets.xcassets in Resources */,
-				057C2C3521A5D26E00221B22 /* Main.storyboard in Resources */,
+				EC45367121BA9E4700F7C6DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,14 +281,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		057C2C3321A5D26E00221B22 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				057C2C3421A5D26E00221B22 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		057C2C3821A5D26E00221B22 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

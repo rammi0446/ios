@@ -16,12 +16,39 @@ class SeeReservationsViewController: UIViewController {
     var mapPokiMoney = 0
     var mapPokiAttack = 0
     
-    
-    
+    var userPokiName = ""
+    var userPokiHP = 80
+    var userPokiDefense = 1
+    var userPokiMoney = 0
+    var userPokiAttack = 4
     
     //MARK: Outlets
     @IBOutlet weak var textField: UITextView!
+    @IBAction func attackUser(_ sender: Any) {
+        print("user attacj to computer")
+        if(mapPokiHP <= 0){
+        print("you have to take poki to hospital")
+        }
+        else{
+            mapPokiHP = mapPokiHP - userPokiAttack + mapPokiDefense;
+            print("Hp left only of computer\(mapPokiHP)");
+            
+        }
+        
+    }
     
+    @IBAction func attackComputer(_ sender: Any) {
+        print("computer attacks to user")
+        if(userPokiHP <= 0){
+                print("you have to take poki to hospital");
+        }
+        else{
+            userPokiHP = (userPokiHP - mapPokiAttack  + userPokiDefense) ;
+            print("Hp left only of user is\(userPokiHP)");
+        
+            
+        }
+    }
     
     // MARK: Firebase variables
     var db:Firestore!
@@ -56,10 +83,10 @@ class SeeReservationsViewController: UIViewController {
                 // 1. Get one result from database
                 let results = snapshot!.documents
                 let data = results[i].data()
-                print(data["HP"]!)
-                print(data["Attack"]!)
-                print(data["Defense"]!)
-                print(data["Money"]!)
+                print(" computer Hp \(data["HP"]!)")
+                print("attack \(data["Attack"]!)")
+                print("Defense \(data["Defense"]!)")
+                print("Money \(data["Money"]!)")
                     self.mapPokiHP = data["HP"]! as! Int
                     self.mapPokiName = data["name"]! as! String
                     self.mapPokiAttack = data["Attack"]! as! Int

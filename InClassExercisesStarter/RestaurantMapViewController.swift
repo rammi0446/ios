@@ -87,7 +87,7 @@ class RestaurantMapViewController: UIViewController, MKMapViewDelegate, CLLocati
                     "name" : pin.title,
                     "HP" : 60,
                     "Attack" : 7,
-                    "Defense" : 12,
+                    "Defense" : 1,
                     "Money" : 0
                     ])
                 case 2:
@@ -99,7 +99,7 @@ class RestaurantMapViewController: UIViewController, MKMapViewDelegate, CLLocati
                         "name" : pin.title,
                         "HP" : 50,
                         "Attack" : 5,
-                        "Defense" : 10,
+                        "Defense" : 1,
                         "Money" : 0
                     ])
                 case 3:
@@ -111,7 +111,7 @@ class RestaurantMapViewController: UIViewController, MKMapViewDelegate, CLLocati
                         "name" : pin.title,
                         "HP" : 40,
                         "Attack" : 4,
-                        "Defense" : 9,
+                        "Defense" : 1,
                         "Money" : 0
                     ])
                     
@@ -124,7 +124,7 @@ class RestaurantMapViewController: UIViewController, MKMapViewDelegate, CLLocati
                         "name" : pin.title,
                         "HP" : 35,
                         "Attack" : 4,
-                        "Defense" : 8,
+                        "Defense" : 1,
                         "Money" : 0
                     ])
                     
@@ -137,7 +137,7 @@ class RestaurantMapViewController: UIViewController, MKMapViewDelegate, CLLocati
                         "name" : pin.title,
                         "HP" : 30,
                         "Attack" : 3,
-                        "Defense" : 7,
+                        "Defense" : 1,
                         "Money" : 0
                     ])
                     default:
